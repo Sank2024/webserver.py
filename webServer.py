@@ -42,7 +42,6 @@ def webServer(port=13331):
             connectionSocket.close()  # closing the connection socket
 
         except Exception as e:
-            print(e)
             not_found_response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\nServer: Sankalpa\r\n\r\n404 Not Found\r\n"
             connectionSocket.sendall(not_found_response.encode())
             connectionSocket.close()

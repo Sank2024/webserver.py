@@ -25,7 +25,7 @@ def webServer(port=13331):
             # opens the client requested file.
             # Plenty of guidance online on how to open and read a file in python. How should you read it though if you plan on sending it through a socket?
             f = open(filename[1:],'rb')
-            outputdata=(b"HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\nServer: Sankalpa; connection: close\r\n\r\n")
+            outputdata=(b"HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\nServer: Sankalpa\r\nConnection: close\r\n\r\n")
 
             # Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
 
